@@ -1,0 +1,21 @@
+Learnings:
+
+1. Integer to array in java: https://www.codegrepper.com/code-examples/java/integer+to+array+in+java
+
+
+Errors Faced:
+1. NumberFormatException: https://codegym.cc/groups/posts/numberformatexception-in-java
+
+
+
+
+
+
+
+
+
+
+Reffered Links:
+GFG : https://www.geeksforgeeks.org/biginteger-tostring-method-in-java/#:~:text=()%3A%20The%20java.-,math.,to%20convert%20BigInteger%20to%20String.
+JavaTPoint: https://compiler.javatpoint.com/opr/test.jsp?filename=BigIntegerAddExample
+JavaTPoint: https://www.javatpoint.com/java-biginteger-add-method
