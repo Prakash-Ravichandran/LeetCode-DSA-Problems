@@ -1,16 +1,16 @@
-import java.math.BigInteger;
 class Solution {
     
     public int[] plusOne(int[] digits) {
-        int arr[] = digits;
+       // int arr[] = digits; /* reduced from 6ms to 5ms */
         StringBuilder builder = new StringBuilder();
-        for (int num : arr) {
+        for (int num : digits) {
          builder.append(num);
         }
         
         BigInteger number = new BigInteger(builder.toString());
         BigInteger incre = new BigInteger("1");  
         number = number.add(incre);
+        
         String temp = number.toString();
         int[] numbers = new int[temp.length()];
         for (int i = 0; i < temp.length(); i++) {
