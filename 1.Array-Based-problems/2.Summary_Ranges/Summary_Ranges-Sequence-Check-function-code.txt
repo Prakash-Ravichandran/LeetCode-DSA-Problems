@@ -1,0 +1,346 @@
+class HelloWorld {
+    // static int[] nums = {1, 2, 3, 4, 5};
+      static int[] nums = {0, 1, 2, 4, 5, 7};
+      
+    public static boolean sequenceCheck(int a, int b){
+        int difference = 1;
+        int actualDiff = b-a;
+        if( actualDiff == difference){
+            return true;
+        }
+        else {
+            return false;
+        }
+    } 
+    
+    public static void main(String[] args) {
+        
+       for(int i=0,j=1; i< nums.length -1; i++,j++){
+          boolean bool = sequenceCheck(nums[i],nums[j]);
+          System.out.println("\n");
+          System.out.println("The nums"+" " +nums[i] +"&"+nums[j] +" = "+ " "+bool);
+       }
+    }
+}
+
+
+// new code -------------------------------------->
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    // static int[] nums = {1, 2, 3, 4, 5};
+       static int[] nums = {0,1,2,4,5,7};
+     // static int[] nums = {0,2,3,4,6,8,9};
+      static int startingRange = nums[0];
+      
+      static String ranges[] = {};
+     
+    public static boolean sequenceCheck(int a, int b){
+        int difference = 1;
+        int actualDiff = b-a;
+        if( actualDiff == difference){
+            return true;
+            }
+        else {
+            return false;
+            }
+     } 
+    
+    public static void main(String[] args) {
+       for(int i=0,j=1; i< nums.length -1; i++,j++){
+          boolean bool = sequenceCheck(nums[i],nums[j]);
+          System.out.println("\n");
+          System.out.println("The nums"+" " +nums[i] +"&"+nums[j] +" = "+ " "+bool);
+          if(!bool){
+              int startingRange = nums[i];
+              int endingRange = nums[j];
+              String range = ""+nums[i]+"->"+nums[j];
+              System.out.println("range is" +range);
+          }
+          
+         }
+      }
+  }
+
+
+
+
+--New modified code-----------
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+
+class HelloWorld {
+    // static int[] nums = {1, 2, 3, 4, 5};
+       static int[] nums = {0,1,2,4,5,7};
+     // static int[] nums = {0,2,3,4,6,8,9};
+      static int startingRange = nums[0];
+      static  List<String> rangeArray = new ArrayList<String>();
+      
+    public static boolean fEA(int truedNum){
+        System.out.println(truedNum);
+        for(int x: nums){
+            if(truedNum == x){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        return false;
+    }  
+     
+    public static List<String> setRange(String range){
+       // List<String> rangeArray = new ArrayList<String>();
+        rangeArray.add(range);
+        System.out.println(rangeArray);
+        return rangeArray;
+    }  
+     
+    public static boolean sequenceCheck(int a, int b){
+        int difference = 1;
+        int actualDiff = b-a;
+        if( actualDiff == difference){
+            return true;
+            }
+        else {
+            return false;
+            }
+     } 
+    
+    public static void main(String[] args) {
+       for(int i=0,j=1; i< nums.length -1; i++,j++){
+          boolean bool = sequenceCheck(nums[i],nums[j]);
+          System.out.println("\n");
+          System.out.println("The nums"+" " +nums[i] +"&"+nums[j] +" = "+ " "+bool);
+          if(!bool){
+             // int previousEndingRange = nums[i];
+              int newStartingRange = nums[i];
+              int endingRange = nums[j];
+              String range = ""+nums[i]+"->"+nums[j];
+              setRange(range);
+              System.out.println("range is" +range);
+          }
+          else{
+              int checkNum = nums[j];
+              boolean bool2 = fEA(checkNum++);
+              if(!bool2){
+                  
+              }
+              else{
+                  continue;
+              }
+               
+          }
+         }
+         // System.out.println(rangeArray);
+      }
+  }
+
+
+------------------------------------------------------------
+
+code at 12:52 pm
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+
+class HelloWorld {
+         static int[] nums = {1, 2, 3, 4, 5};
+       //static int[] nums = {0,1,2,4,5,7};
+     // static int[] nums = {0,2,3,4,6,8,9};
+      static int startingRange = nums[0];
+      static  List<String> rangeArray = new ArrayList<String>();
+      
+    public static boolean fEA(int truedNum){
+        boolean bool = false;
+        for(int x: nums){
+            if(truedNum == x){
+                bool = true;
+                return bool;
+            }
+            else{
+               continue;
+            }
+        }
+        System.out.println("fEA return value is"+bool);
+        return bool;
+    }  
+     
+    public static List<String> setRange(String range){
+       // List<String> rangeArray = new ArrayList<String>();
+        rangeArray.add(range);
+        System.out.println(rangeArray);
+        return rangeArray;
+    }  
+     
+    public static boolean sequenceCheck(int a, int b){
+        int difference = 1;
+        int actualDiff = b-a;
+        if( actualDiff == difference){
+            return true;
+            }
+        else {
+            return false;
+            }
+     } 
+    
+    public static void main(String[] args) {
+       for(int i=0,j=1; i< nums.length -1; i++,j++){
+          boolean bool = sequenceCheck(nums[i],nums[j]);
+          System.out.println("\n");
+          System.out.println("The nums"+" " +nums[i] +"&"+nums[j] +" = "+ " "+bool);
+          if(!bool){
+             // int previousEndingRange = nums[i];
+              int newStartingRange = nums[i];
+              int endingRange = nums[j];
+              String range = ""+nums[i]+"->"+nums[j];
+              setRange(range);
+              System.out.println("range is" +range);
+          }
+          else{
+              int checkNum = nums[j];
+              System.out.println("Chechnum is = "+checkNum);
+              boolean bool2 = fEA(checkNum++);
+             // System.out.println(bool2);
+              if(!bool2){
+                    System.out.println("Hello878978");
+              }
+              else{
+                  System.out.println("Hello");
+                  continue;
+              }
+            // while(bool2){
+            //     boolean bool3 = fEA(checkNum++);
+            //     if(!bool3){
+            //         bool2 = false;
+            //         System.out.println("inside true lop");
+            //     }
+            //     else{
+            //         System.out.println("hello-world");
+            //     }
+                
+            // }
+          }
+         }
+         // System.out.println(rangeArray);
+      }
+  }
+
+
+
+----------------------------
+
+code at 13:49 Pm;;
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+
+class HelloWorld {
+      // static int[] nums = {1, 2, 3, 4, 5};
+       static int[] nums = {0,1,2,4,5,7};
+     // static int[] nums = {0,2,3,4,6,8,9};
+      static int startingRange = nums[0];
+      static int endingRange = 0;
+      static int trueCount = 0;
+      static  List<String> rangeArray = new ArrayList<String>();
+      
+    public static boolean fEA(int truedNum){
+        boolean bool = false;
+        for(int x: nums){
+            if(truedNum == x){
+                bool = true;
+                return bool;
+            }
+            else{
+               continue;
+            }
+        }
+        System.out.println("fEA return value is"+bool);
+        return bool;
+    }  
+     
+    public static List<String> setRange(String range){
+       // List<String> rangeArray = new ArrayList<String>();
+        rangeArray.add(range);
+        System.out.println(rangeArray);
+        return rangeArray;
+    }  
+     
+    public static boolean sequenceCheck(int a, int b){
+        int difference = 1;
+        int actualDiff = b-a;
+        if( actualDiff == difference){
+            return true;
+            }
+        else {
+            return false;
+            }
+     } 
+    
+    public static void main(String[] args) {
+       for(int i=0,j=1; i< nums.length -1; i++,j++){
+          boolean bool = sequenceCheck(nums[i],nums[j]);
+          System.out.println("\n");
+          System.out.println("The nums"+" " +nums[i] +"&"+nums[j] +" = "+ " "+bool);
+          if(!bool){
+              /*
+              int newStartingRange = nums[i];
+              int endingRange2 = nums[j];
+              String range = ""+nums[i]+"->"+nums[j];
+              setRange(range);
+              System.out.println("range is" +range); */
+              int startingRange = nums[i];
+              int endingRange = nums[j];
+              String range = ""+startingRange+"->"+endingRange;
+              setRange(range);
+              System.out.println("range is" +range);
+          }
+          else{
+              int checkNum = nums[j];
+              checkNum++;
+             // System.out.println("Chechnum is = "+checkNum);
+              boolean bool2 = fEA(checkNum);
+             
+             // System.out.println(bool2);
+              if(!bool2){
+                    System.out.println("Hello878978");
+                    startingRange = nums[i];
+                    endingRange = nums[j];
+                    String range2 = ""+startingRange+"->"+endingRange;
+                  //  System.out.println("range is8987" +range2);
+                    setRange(range2);
+              }
+              else{
+                 System.out.println("inside else-else");
+                  int stRange = nums[i];
+                  startingRange = stRange;
+                  int edRange = nums[j];
+                  endingRange = edRange;
+                   String range3 = ""+startingRange+"->"+endingRange;
+                  setRange(range3);
+            //  System.out.println("range is" +range);
+                 // continue;
+              }
+            // while(bool2){
+            //     boolean bool3 = fEA(checkNum++);
+            //     if(!bool3){
+            //         bool2 = false;
+            //         System.out.println("inside true lop");
+            //     }
+            //     else{
+            //         System.out.println("hello-world");
+            //     }
+                
+            // }
+          }
+         }
+         // System.out.println(rangeArray);
+      }
+  }
