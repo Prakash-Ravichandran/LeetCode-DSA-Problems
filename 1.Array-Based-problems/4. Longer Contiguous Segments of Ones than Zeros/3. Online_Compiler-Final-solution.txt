@@ -1,0 +1,63 @@
+import java.util.*;
+
+class Longest_Continuos_Check {
+ 
+    static String s = "110100010";
+    static char[] strArr = new char[s.length()];
+    static int oneCounter = 0;
+    static int zeroCounter = 0;
+    static  int max =0;
+    static  int zero_max =0;
+    
+     public static boolean sequenceCheckOnes(char a){
+        Character firstValue = new Character(a);  
+        Object objOne = new Character('1');  
+        if( firstValue.equals(objOne)){
+            oneCounter++;
+            max = Math.max(oneCounter,max);
+            return true;
+        }
+        else{
+             oneCounter=0;
+             return false;
+        }
+    } 
+    
+    public static boolean sequenceCheckZeros(char b){
+        Character firstValue = new Character(b);  
+        Object objOne = new Character('0');  
+        if( firstValue.equals(objOne)){
+            zeroCounter++;
+            zero_max = Math.max(zeroCounter,zero_max);
+            return true;
+        }
+        else{
+             zeroCounter = 0;
+             return false;
+        }
+    }
+    
+    public static void main(String[] args) {
+     
+       for(int i=0; i < s.length(); i++){
+           strArr[i] = s.charAt(i);
+       }
+   
+      for(int i=0; i < strArr.length; i++){
+          boolean bool =  sequenceCheckOnes(strArr[i]);
+          boolean bool2 =  sequenceCheckZeros(strArr[i]);
+        }
+        System.out.println("\n one_Counter value is="+max);
+        System.out.println("\n zero_Counter value is="+zero_max);
+        
+        if(max > zero_max){
+            System.out.println("The longest contiguous is 1's sequence & the value is="+max);
+        }
+        else if( max == zero_max){
+             System.out.println("Both are equal");
+        }
+        else{
+            System.out.println("The longest contiguous is 0's sequence & the value is="+zero_max);
+        }
+    }
+}
