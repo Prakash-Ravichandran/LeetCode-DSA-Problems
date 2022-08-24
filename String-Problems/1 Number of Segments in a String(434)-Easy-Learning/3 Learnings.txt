@@ -1,0 +1,13 @@
+1. Thought of solving the problems using .split() function
+2. Then approached by solving using array of regex -> .split("[, \\s]")
+
+Path to solution:
+
+1. \\s+ is the specific regex to catch all words in a sentence(string) 
+2. + a regex means more than once 
+3. \\s a regex means whitespace characters
+
+
+Tried:
+
+1. \\s, \s, "[, \\s ']+"
