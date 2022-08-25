@@ -1,0 +1,4 @@
+1. Intially tried with split to remove char & match with ransomNote - Failed
+2. By concatenting characters one by one & matching with ransomNote - Failed
+3. Then finally tried using string.indexOf() to find a ransomNote string's one of character in magazine, then delete that character in magazine. 
+  3 - Passed all test cases.
