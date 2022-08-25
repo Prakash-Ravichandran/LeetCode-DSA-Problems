@@ -1,0 +1,62 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+       String ransomNote = "atasb";
+       String magazine = "abtsa";
+      
+       String[] arr =  ransomNote.split("a",2);
+       
+       for(String b : arr){
+          // System.out.println(b);
+       }
+       
+       String[] newArr = new String[magazine.length()];
+    
+       int length = ransomNote.length();
+       while(length > 0){
+           for(int i=0; i < magazine.length(); i++){
+                 String arg = ""+ magazine.charAt(i);
+                 System.out.println("argument is "+arg);
+                 newArr = ransomNote.split(arg,2);
+        System.out.println("newArr is "+ Arrays.toString(newArr));
+                 length = newArr.length;
+           }
+       }
+    }
+}
+
+
+---------------------------------------------------------------
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+
+class HelloWorld {
+    public static void main(String[] args) {
+       String ransomNote = "atasb";
+       String magazine = "abtsa";
+      
+       String[] arr =  ransomNote.split("a",2);
+       
+       for(String b : arr){
+          // System.out.println(b);
+       }
+       
+       String[] newArr = new String[magazine.length()];
+    
+       int length = ransomNote.length();
+       while(length > 0){
+           for(int i=0; i < magazine.length(); i++){
+            String arg = Character.toString(magazine.charAt(i));
+                   newArr = ransomNote.split(arg);
+                   length = newArr.length;
+                   System.out.println(length);
+           }
+       }
+    }
+}
