@@ -1,0 +1,50 @@
+T(n) = 2n^2 + 3n + 1
+
+ 1 => Drop lower order terms => 2n^2
+ 2 => Drop all the constant multipliers => n^2
+
+Time complexity of for(){} loop
+
+     for( i=1; i < n; i++) {
+          x = y + z;  //  n * c  => O(n)  
+}
+
+
+public class Single_Num {
+
+   public int Single_number(int[] nums){
+             int not_repeated_num=0;                                                       =>   c or 1
+		 System.out.println("Nums Array="+Arrays.toString(nums));
+		 for( int x: nums) {
+		      boolean bool = check_repeated(x,nums);                                      => n * c 
+		      if( bool ) { System.out.println("The Num %d="+x+ " is a repeated num"); }    
+		      else {
+		    	  System.out.println("The Num %d="+x + " is a single num");
+		    	  not_repeated_num = x; return not_repeated_num;}                             => n * c
+		      }
+		 return not_repeated_num;  
+		}
+
+
+ public boolean check_repeated( int x,int[] nums) {
+		    int current_num_count = 0;                                =>   c or 1
+		    for(int y: nums) {
+		    	 if(y == x) { current_num_count++;}                     =>   n * c 
+		    	 else {}
+		    }
+		    
+		    if( current_num_count == 2 )  return true;                  => c or 1  
+		    return false;
+		}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Time complexity =  1 + n*c + n*c + 1 + n*c + 1   =>  3 + 3( n*c)
+                => eliminate lower powers =>  3(n*c)
+                => eliminate multipliers => n * c
+               => eliminate constants => n
+Hence time complexity = O(n) 
+ 
+
+
+
