@@ -9,6 +9,7 @@ Time complexity of for(){} loop
           x = y + z;  //  n * c  => O(n)  
 }
 
+Geeks for geeks link: https://youtu.be/KXAbAa1mieU
 
 public class Single_Num {
 
