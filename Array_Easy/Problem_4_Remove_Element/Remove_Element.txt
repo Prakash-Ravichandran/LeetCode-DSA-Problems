@@ -1,0 +1,40 @@
+https://leetcode.com/problems/remove-element/
+
+
+Input: nums = [3,2,2,3], val = 3
+Output: 2, nums = [2,2,_,_]
+
+Input: nums = [0,1,2,2,3,0,4,2], val = 2
+Output: 5, nums = [0,1,4,0,3,_,_,_]
+
+
+
+1. return the length of array after removal of val from nums 
+2. to replace the val with underscores.
+
+
+1. to identify the val with nums[] array
+2. to replace the val with underscores 
+3. to shift all the unserscores to the right
+4. to return the length of array except the underscores.
+
+
+temp = 0;
+ = 
+
+
+//    public List<Integer> swap(List<Integer> arr){
+//    	System.out.println("Inside swap");
+//    	int temp = 0;
+//    	for(int i=0,j=1; j <= arr.size(); i++,j++) {
+//    		
+//    		   if( arr.get(i) == 0) { 
+//    			   temp = arr.get(i);
+//    			  
+//    			   arr.add(i, arr.get(j));
+//    			   }
+//    		   else { System.out.println("Hello world");}
+//    	}
+//    	System.out.println("before returning arr");
+//    	return arr;
+ //   }

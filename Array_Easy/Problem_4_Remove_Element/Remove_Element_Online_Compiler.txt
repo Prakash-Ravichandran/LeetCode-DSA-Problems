@@ -1,0 +1,33 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Arrays;
+class HelloWorld {
+    
+    public int removeElement(int[] nums, int val) {
+    int i = 0;
+    int n = nums.length;
+    while (i < n) {
+         System.out.println("value of i First="+i);
+        if (nums[i] == val) {
+            nums[i] = nums[n - 1];
+            System.out.println("nums are="+Arrays.toString(nums));
+            // reduce array size by one
+            n--;
+            System.out.println("value of n is="+n);
+        } else {
+            i++;
+        }
+        System.out.println("value of i Last="+i);
+    }
+    System.out.println("--------------The Final value of n="+n);
+    return n;
+}
+
+    public static void main(String[] args) {
+        HelloWorld obj = new HelloWorld();
+        int[] nums = {4,1,2,3,5};
+        int[] nums2 = {1,2,3,5,4};
+       // obj.removeElement(nums,4);
+        obj.removeElement(nums2,4);
+    }
+}
