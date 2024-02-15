@@ -1,0 +1,39 @@
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        int k = 0;
+		for (int j=0; j < nums.length; j++) {
+			if (nums[j] == val) {
+				//
+			} else {
+                nums[k]=nums[j];
+				k++;
+			}
+		}
+		return k;
+    }
+    public List<Integer> replace_with_Zero(int x, List<Integer> arr) {
+		arr.add(7);
+		return arr;
+	}
+	public List<Integer> replace_with_as_it_is(int x, List<Integer> arr) {
+		arr.add(x);
+		return arr;
+	}
+    public List<String> replace_with_underscore(List<Integer> arr){
+    	List<String> arr_string = new ArrayList<String>();
+    	for(int num: arr) {
+    		if(num ==0) { arr_string.add("_"); }
+    		//else {arr_string.add(num);}
+    	}
+    	return arr_string;
+    }
+    
+    public List<Integer> swap(List<Integer> arr){
+    	for(int i=0,j=1; j < arr.size(); i++,j++) {
+    		if( arr.get(i) == 7) {
+    			Collections.swap(arr, i, j);
+    		}
+    	}
+    	return arr;
+    }
+}

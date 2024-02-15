@@ -1,0 +1,25 @@
+class Solution {
+
+    public int singleNumber(int[] nums) {
+        int not_repeated_num=0;
+        System.out.println("Nums Array="+Arrays.toString(nums));
+        for( int x: nums) {
+		      boolean bool = check_repeated(x,nums);
+		      if( bool ) { System.out.println("The Num %d="+x + " is a repeated num"); }
+		      else {
+		    	  System.out.println("The Num %d="+x + " is a single num");
+		    	  not_repeated_num = x; return not_repeated_num;}
+		      }
+		 return not_repeated_num;  
+    }
+
+     public boolean check_repeated( int x,int[] nums) {
+		    int current_num_count = 0;
+		    for(int y: nums) {
+		    	 if(y == x) { current_num_count++;}
+		    	 else {}
+		    }
+		    if( current_num_count == 2 )  return true;
+		    return false;
+		}
+}
