@@ -1,6 +1,0 @@
-
-1. To find the presence of 1's in array using if( num == 1).
-2. Increment the count in the if-Loop on consecutive 1's.
-3. calculate max in the if loop itself.
-4. decrement the count =0 in the else loop. 
-5. return max.
